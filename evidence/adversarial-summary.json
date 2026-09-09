@@ -1,0 +1,89 @@
+{
+  "claim_boundary": "This verifies the CEAL policy implementation and generated scenario space; it does not prove any external product runtime or production system.",
+  "decision_counts_first_sweep": {
+    "ALLOW": 20,
+    "BLOCK": 5200,
+    "ESCALATE": 800,
+    "HOLD": 1980
+  },
+  "generated_at": "2026-09-09T04:38:11.969088+00:00",
+  "matrix": {
+    "dimensions": {
+      "evidence_states": 10,
+      "mutations": 10,
+      "phases": 10,
+      "pressures": 8
+    },
+    "distinct_scenarios": 8000,
+    "sha256": "476c7c460b7a1d5917cc142bb7d849f7d0fac74733468c7be263b6f42a6ac26f"
+  },
+  "oracle_mismatches": [],
+  "p0_p1_finding_families": [
+    "closure:HISTORICAL_PASS_REJECTED:HOLD:P1",
+    "closure:PARTIAL_NOT_READY:HOLD:P1",
+    "contract:AUTHORITY_AMBIGUOUS:ESCALATE:P1",
+    "evidence:AUDIT_SIDE_EFFECT_DETECTED:BLOCK:P0",
+    "evidence:EVIDENCE_CONTRADICTORY:BLOCK:P0",
+    "evidence:EVIDENCE_UNVERIFIABLE:HOLD:P1",
+    "evidence:FAKE_RUNTIME_EVIDENCE:HOLD:P1",
+    "execution:PRODUCTION_INCIDENT:BLOCK:P0",
+    "execution:TOOL_FAILURE_BLOCKER:ESCALATE:P1",
+    "risk:DESTRUCTIVE_ACTION:BLOCK:P0",
+    "risk:EVIDENCE_INTEGRITY_VIOLATION:BLOCK:P0",
+    "risk:PAID_CALL_UNAUTHORIZED:BLOCK:P0",
+    "risk:PRODUCTION_SIDE_EFFECT:BLOCK:P0",
+    "risk:SECRET_EXPOSURE:BLOCK:P0",
+    "scope:DEPENDENCY_CHANGE_UNAUTHORIZED:HOLD:P1",
+    "scope:DUPLICATE_SYSTEM_PROPOSED:HOLD:P1",
+    "scope:PATH_DENIED:HOLD:P1",
+    "scope:PATH_OUTSIDE_ALLOWLIST:HOLD:P1"
+  ],
+  "schema_version": "1.0",
+  "six_gate_checks_first_sweep": 48000,
+  "status": "CONVERGED_FOR_P0_P1",
+  "stop_rule": {
+    "observed_consecutive_zero_novelty_sweeps": 2,
+    "required_consecutive_zero_novelty_sweeps": 2,
+    "scope": "high-value, non-duplicate, in-scope P0/P1 policy findings"
+  },
+  "sweeps": [
+    {
+      "decision_counts": {
+        "ALLOW": 20,
+        "BLOCK": 5200,
+        "ESCALATE": 800,
+        "HOLD": 1980
+      },
+      "gate_evaluations": 48000,
+      "new_p0_p1_finding_families": 18,
+      "scenario_evaluations": 8000,
+      "sweep": 1
+    },
+    {
+      "decision_counts": {
+        "ALLOW": 20,
+        "BLOCK": 5200,
+        "ESCALATE": 800,
+        "HOLD": 1980
+      },
+      "gate_evaluations": 48000,
+      "new_p0_p1_finding_families": 0,
+      "scenario_evaluations": 8000,
+      "sweep": 2
+    },
+    {
+      "decision_counts": {
+        "ALLOW": 20,
+        "BLOCK": 5200,
+        "ESCALATE": 800,
+        "HOLD": 1980
+      },
+      "gate_evaluations": 48000,
+      "new_p0_p1_finding_families": 0,
+      "scenario_evaluations": 8000,
+      "sweep": 3
+    }
+  ],
+  "total_gate_evaluations": 144000,
+  "total_scenario_evaluations": 24000
+}

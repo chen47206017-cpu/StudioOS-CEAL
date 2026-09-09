@@ -1,0 +1,38 @@
+name: CEAL CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: "3.11"
+
+      - name: Unit and policy tests
+        env:
+          PYTHONPATH: src
+        run: python -m unittest discover -s tests -v
+
+      - name: Validate task package
+        env:
+          PYTHONPATH: src
+        run: python -m studioos_ceal validate-task templates/TASK_PACKAGE.example.json
+
+      - name: Run 8000-scenario convergence
+        env:
+          PYTHONPATH: src
+        run: python -m studioos_ceal run --output-dir evidence

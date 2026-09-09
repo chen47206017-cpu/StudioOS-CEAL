@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "studioos-ceal"
+version = "0.1.0"
+description = "Project-agnostic controlled engineering assurance lifecycle"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "StudioOS-CEAL contributors" }]
+dependencies = []
+
+[project.scripts]
+ceal = "studioos_ceal.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
