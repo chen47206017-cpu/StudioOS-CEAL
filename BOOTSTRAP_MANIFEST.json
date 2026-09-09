@@ -3,90 +3,22 @@
   "version": "1.0.0-bootstrap",
   "file_count": 17,
   "files": [
-    {
-      "path": "AGENTS.md",
-      "size": 725,
-      "sha256": "94b9aa1a4ee0cee36883c6a54c59ed466ec726b1eb87c4047b44daadfcd0e24b"
-    },
-    {
-      "path": "README.md",
-      "size": 1004,
-      "sha256": "0048ffa7aa5a431383cf97c8e853848254578828307da3fc5ef57fc687849bd9"
-    },
-    {
-      "path": "VERSION",
-      "size": 16,
-      "sha256": "d6026e3726d95975028867c536f1e91742cb6daeeae61186953f2794e9fa747e"
-    },
-    {
-      "path": "bootstrap/CEAL-BOOTSTRAP-001_PLAN.md",
-      "size": 676,
-      "sha256": "b5c6801c5ba1f0e0088579f4b2f21409bb2f59456dd72714f268b12d7c20e06c"
-    },
-    {
-      "path": "bootstrap/CODEX_FULL_EXECUTION_PROMPT.md",
-      "size": 1880,
-      "sha256": "085dc2ee4994681b85b0575b99e16e35d107370c260cc0f525637cc60c2db3f4"
-    },
-    {
-      "path": "ceal/constitution/CONSTITUTION.md",
-      "size": 1009,
-      "sha256": "733e149162c00f58813759d17dc71fc9c15e67a9a63b9d1bf695c0bc95596d23"
-    },
-    {
-      "path": "docs/architecture/CEAL_ARCHITECTURE.md",
-      "size": 628,
-      "sha256": "7e124cdc438cdd5c5f35118d30cf842385632d4aa5c00fd7b5206f8a7b36aeaf"
-    },
-    {
-      "path": "docs/protocols/CONTROLLED_EXECUTION_PROTOCOL.md",
-      "size": 630,
-      "sha256": "2f24a960a8fc6e6d2d33eba49144833b36a56d050795973fab5e558d399ea96c"
-    },
-    {
-      "path": "docs/protocols/EVIDENCE_PROTOCOL.md",
-      "size": 452,
-      "sha256": "2a01f0193e7f222e6f058e32f9752279d5acee423245ff6299f76cb92b650651"
-    },
-    {
-      "path": "docs/protocols/INDEPENDENT_AUDIT_PROTOCOL.md",
-      "size": 789,
-      "sha256": "c5e330703f5aa9caf22bf2464c4f3436c578cc7c7079c6cff7b5423334da9e99"
-    },
-    {
-      "path": "docs/threat-model/THREAT_MODEL.md",
-      "size": 475,
-      "sha256": "dda964f231601b4933391bdb4592e0b2f41ab190691b287b9c39b4f21f1ba94b"
-    },
-    {
-      "path": "policies/invariants.yaml",
-      "size": 516,
-      "sha256": "3e9a1141c0868a4d7a3a072d39cd2f42414baf068410bd8ce394165cd7c167ae"
-    },
-    {
-      "path": "policies/risk-policy.yaml",
-      "size": 326,
-      "sha256": "f123de44ace7ebdb65759fd51821fa84c1d242cb1a076f64ecf9ec5dc5d5755f"
-    },
-    {
-      "path": "schemas/audit-verdict.schema.json",
-      "size": 1907,
-      "sha256": "60d7dc8b2dee83f8911d564a75e1364650eabfc547a02255362e444db953a64c"
-    },
-    {
-      "path": "schemas/task-contract.schema.json",
-      "size": 5174,
-      "sha256": "35e36ae384022cf32f846d94f6cac9c32c0c3d481116f55d4fb3818dd1201922"
-    },
-    {
-      "path": "templates/PROJECT_PROFILE.yaml",
-      "size": 177,
-      "sha256": "0b9bb61456e5d140d95872e715e35136a1d0b386d72c1ccf16e263f468d04ffb"
-    },
-    {
-      "path": "templates/TASK_CONTRACT.yaml",
-      "size": 1196,
-      "sha256": "9ca9821762db5431031223cb64438bed1d27af69e1300ac2fd570e2b07c2a893"
-    }
+    {"path":"AGENTS.md","size":4026,"sha256":"e3a54b6eed0e94f60dbf7000777e1047e295845f7b6743706c35e4f1ad412c98"},
+    {"path":"README.md","size":3054,"sha256":"720d396e700c630f56b041a0e7f520887aa3c13ad6d1f7491e5a87d4a18be231"},
+    {"path":"VERSION","size":16,"sha256":"d6026e3726d95975028867c536f1e91742cb6daeeae61186953f2794e9fa747e"},
+    {"path":"bootstrap/CEAL-BOOTSTRAP-001_PLAN.md","size":859,"sha256":"1d622dbc7cfe1bc6eaf9751e10d504148cf78601460d8bcdffe206ce59c55fc6"},
+    {"path":"bootstrap/CODEX_FULL_EXECUTION_PROMPT.md","size":1239,"sha256":"1aec1b81d1d66d6e0f38a2f6d2c01c767ed75f802b4cae6f5549667409a05ec7"},
+    {"path":"ceal/constitution/CONSTITUTION.md","size":1361,"sha256":"c1003d7edd8752faa06e6ccf0b0f569b8f3c0c8b844b72cbe23d694be12496b3"},
+    {"path":"docs/architecture/CEAL_ARCHITECTURE.md","size":1462,"sha256":"0026df50731e05d724c169e6336b3fcf2817e105242747430739fc355ace03ed"},
+    {"path":"docs/protocols/CONTROLLED_EXECUTION_PROTOCOL.md","size":1034,"sha256":"426724591946a9871f7e7a2bc40b5fd42f470b391dd479d85109b13c5f75da50"},
+    {"path":"docs/protocols/EVIDENCE_PROTOCOL.md","size":955,"sha256":"db6ef9ef53ddb58c0980f2947c514ed3bd4e60111028cf1b3d2cc5db1df7e6cc"},
+    {"path":"docs/protocols/INDEPENDENT_AUDIT_PROTOCOL.md","size":968,"sha256":"dd82304607fa91ca9ae46dd6a454c03f589092dfaaa65a3c9849e6490a52fe3c"},
+    {"path":"docs/threat-model/THREAT_MODEL.md","size":1187,"sha256":"0a7162b6d2f9a0fed676fa4a383e550d6648bebf75f0eba20f8c3d14178db263"},
+    {"path":"policies/invariants.yaml","size":895,"sha256":"df8b5dac33b2b5f861bf739ad2d8964d12ca9f22df057bd3b1d59b6b2dfdb19c"},
+    {"path":"policies/risk-policy.yaml","size":326,"sha256":"f123de44ace7ebdb65759fd51821fa84c1d242cb1a076f64ecf9ec5dc5d5755f"},
+    {"path":"schemas/audit-verdict.schema.json","size":1479,"sha256":"83809087330f7db38e6a94c1421663dbf28343fde4512f61476bfd3162e5e16a"},
+    {"path":"schemas/task-contract.schema.json","size":3882,"sha256":"18e9d0da3aa7b8668b98c3772c91ac99e95ac0aaf677df7de278e380672286f3"},
+    {"path":"templates/PROJECT_PROFILE.yaml","size":177,"sha256":"0b9bb61456e5d140d95872e715e35136a1d0b386d72c1ccf16e263f468d04ffb"},
+    {"path":"templates/TASK_CONTRACT.yaml","size":1196,"sha256":"9ca9821762db5431031223cb64438bed1d27af69e1300ac2fd570e2b07c2a893"}
   ]
 }

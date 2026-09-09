@@ -1,0 +1,10 @@
+{
+  "files": [
+    {
+      "bytes": 3117,
+      "path": "adversarial-summary.json",
+      "sha256": "10a76c1a4ab40930df14945a12a010694e67d3c5ef2f09b3dcf0f93a3e00e44a"
+    }
+  ],
+  "schema_version": "1.0"
+}
