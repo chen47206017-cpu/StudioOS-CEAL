@@ -32,24 +32,54 @@ StudioOS-CEAL 是项目无关的受控工程与独立审计框架。任何 Codex
 
 ## 当前 Assurance Runtime
 
+CLI：
+
 ```bash
 PYTHONPATH=src python -m studioos_ceal validate-task templates/TASK_PACKAGE.example.json
 PYTHONPATH=src python -m studioos_ceal run --output-dir evidence --keep-matrix
 PYTHONPATH=src python -m studioos_ceal verify-manifest evidence/manifest.json
 ```
 
-当前定义空间：10 phases × 14 mutations × 10 evidence states × 8 pressures = **11,200** unique scenarios；三轮共 33,600 场景调用、201,600 次 Gate 评估。阶段维度参与证据要求决策，不再只是机械乘数；除逐场景 oracle 外，还有不依赖逐项 expected 的全矩阵不变量测试。
+当前定义空间：
+
+- 10 个生命周期阶段；
+- 14 类变更/攻击；
+- 10 种证据状态；
+- 8 类压力；
+- 共 **11,200** 个唯一场景；
+- 三轮共 33,600 场景调用、201,600 次六门禁评估。
+
+阶段维度参与证据要求决策，不再只是机械乘数。除逐场景 oracle 外，还有跨全矩阵的不变量测试。
 
 这里的“稳定”只证明当前定义策略空间与当前实现一致，并不证明未建模风险不存在。
 
 ## 两套 Gate 的关系
 
-治理层八道事务 Gate：`G0 Contract → G1 Authorization → G2 Plan → G3 Change/Scope → G4 Verification → G5 Runtime/Side-effect → G6 Artifact Integrity → G7 Independent Audit`。
+治理层是八道事务 Gate：
 
-Assurance Runtime 六个策略检查器：`Contract / Scope / Risk / Execution / Evidence / Closure`。六检查器是测试/建模工具，不替代八道事务生命周期 Gate。
+`G0 Contract → G1 Authorization → G2 Plan → G3 Change/Scope → G4 Verification → G5 Runtime/Side-effect → G6 Artifact Integrity → G7 Independent Audit`
+
+Assurance Runtime 用六个策略检查器建模：
+
+`Contract / Scope / Risk / Execution / Evidence / Closure`
+
+六检查器是测试/建模工具，不替代八道事务生命周期 Gate。
 
 ## 安全边界
 
-默认 fail-closed：Scope/denylist 逃逸、Policy/Task Contract drift、Secret/付费/生产写入/破坏性动作、修改自己的审计规则、untracked changeset omission、stale/mock/contradictory evidence、artifact hash 或 source identity 不一致。
+默认 fail-closed：
 
-低等级证据不能冒充高等级验收；`AUDIT_APPROVED != RELEASE_APPROVED`。main 分支保护、数字签名、OS sandbox、Secret 托管等仍属于外部平台控制面，不能由本仓库代码自行宣称完成。
+- Scope/denylist 逃逸；
+- Policy / Task Contract drift；
+- Secret、付费、生产写入、破坏性动作；
+- 修改自己的审计规则；
+- untracked changeset omission；
+- stale/mock/contradictory evidence；
+- artifact hash 或 source identity 不一致。
+
+## 证据口径
+
+- 低等级证据不能冒充高等级验收。
+- Review Artifact 必须绑定 exact source identity。
+- `AUDIT_APPROVED != RELEASE_APPROVED`。
+- main 分支保护、数字签名、OS sandbox、Secret 托管等仍属于外部平台控制面，不能由本仓库代码自行宣称完成。
