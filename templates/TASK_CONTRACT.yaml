@@ -1,0 +1,38 @@
+task_id: TASK-0001
+transaction_id: TXN-0001
+task_type: BUGFIX
+objective: "Describe one concrete objective."
+acceptance:
+  - "Acceptance criterion 1"
+  - "Acceptance criterion 2"
+risk_level: L2
+scope:
+  allowed_paths: [src/**, tests/**]
+  denied_paths: [production/**]
+authorization:
+  authorized_changes:
+    - "Modify only the approved task scope."
+  forbidden_changes:
+    - "Do not change protected governance or production data."
+dependency_change: false
+external_side_effects: false
+side_effect_permissions: []
+max_repair_loops: 3
+stop_conditions:
+  - "Stop and package on scope, policy, dependency, paid, destructive, or production authorization boundary."
+rollback:
+  strategy: "Restore only task-touched files from the frozen baseline and preserve user changes."
+  source_preservation_required: true
+evidence_plan:
+  required_levels: [E1, E2]
+  required_artifacts:
+    - "changed-files manifest"
+    - "raw verification logs"
+capability_lease:
+  capabilities: [FILE_READ, FILE_WRITE]
+  expires_on_task_end: true
+  max_uses: null
+frozen_identity:
+  policy_sha256: "0000000000000000000000000000000000000000000000000000000000000000"
+  baseline_id: BASELINE-0001
+  source_tree_identity: null

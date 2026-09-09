@@ -1,0 +1,96 @@
+{
+  "actual_invocation_count": 33600,
+  "claim_boundary": "This executes the defined CEAL policy scenario space and checks an explicit oracle. It is stability/model conformance evidence, not internet research, adaptive learning, external runtime verification, or proof that unmodelled threats do not exist.",
+  "decision_counts_first_sweep": {
+    "ALLOW": 62,
+    "BLOCK": 7840,
+    "ESCALATE": 960,
+    "HOLD": 2338
+  },
+  "generated_at": "2026-09-09T08:57:52.715694+00:00",
+  "matrix": {
+    "dimensions": {
+      "evidence_states": 10,
+      "mutations": 14,
+      "phases": 10,
+      "pressures": 8
+    },
+    "distinct_scenarios": 11200,
+    "phase_sensitive_contexts": 8,
+    "sha256": "be26c0ab48c57bafb539b4937525a0d4c85b80befc39dfd8da6f49453ff28533"
+  },
+  "oracle_mismatches": [],
+  "p0_p1_finding_families": [
+    "closure:HISTORICAL_PASS_REJECTED:HOLD:P1",
+    "closure:PARTIAL_NOT_READY:HOLD:P1",
+    "contract:AUTHORITY_AMBIGUOUS:ESCALATE:P1",
+    "contract:POLICY_DRIFT:BLOCK:P0",
+    "contract:TASK_CONTRACT_DRIFT:BLOCK:P0",
+    "evidence:AUDIT_SIDE_EFFECT_DETECTED:BLOCK:P0",
+    "evidence:EVIDENCE_CONTRADICTORY:BLOCK:P0",
+    "evidence:EVIDENCE_UNVERIFIABLE:HOLD:P1",
+    "evidence:FAKE_RUNTIME_EVIDENCE:HOLD:P1",
+    "execution:PRODUCTION_INCIDENT:BLOCK:P0",
+    "execution:TOOL_FAILURE_BLOCKER:ESCALATE:P1",
+    "risk:AUDIT_POLICY_SELF_MODIFICATION:BLOCK:P0",
+    "risk:DESTRUCTIVE_ACTION:BLOCK:P0",
+    "risk:EVIDENCE_INTEGRITY_VIOLATION:BLOCK:P0",
+    "risk:PAID_CALL_UNAUTHORIZED:BLOCK:P0",
+    "risk:PRODUCTION_SIDE_EFFECT:BLOCK:P0",
+    "risk:SECRET_EXPOSURE:BLOCK:P0",
+    "scope:CHANGESET_INCOMPLETE:HOLD:P1",
+    "scope:DEPENDENCY_CHANGE_UNAUTHORIZED:HOLD:P1",
+    "scope:DUPLICATE_SYSTEM_PROPOSED:HOLD:P1",
+    "scope:PATH_DENIED:HOLD:P1",
+    "scope:PATH_OUTSIDE_ALLOWLIST:HOLD:P1"
+  ],
+  "schema_version": "1.1",
+  "six_gate_checks_first_sweep": 67200,
+  "status": "STABLE_FOR_DEFINED_P0_P1_SPACE",
+  "stop_rule": {
+    "interpretation": "full-space stability confirmation; not an adaptive search process",
+    "observed_consecutive_zero_novelty_sweeps": 2,
+    "required_consecutive_zero_novelty_sweeps": 2,
+    "scope": "defined, high-value, non-duplicate P0/P1 policy finding families"
+  },
+  "sweeps": [
+    {
+      "decision_counts": {
+        "ALLOW": 62,
+        "BLOCK": 7840,
+        "ESCALATE": 960,
+        "HOLD": 2338
+      },
+      "gate_evaluations": 67200,
+      "new_p0_p1_finding_families": 22,
+      "scenario_evaluations": 11200,
+      "sweep": 1
+    },
+    {
+      "decision_counts": {
+        "ALLOW": 62,
+        "BLOCK": 7840,
+        "ESCALATE": 960,
+        "HOLD": 2338
+      },
+      "gate_evaluations": 67200,
+      "new_p0_p1_finding_families": 0,
+      "scenario_evaluations": 11200,
+      "sweep": 2
+    },
+    {
+      "decision_counts": {
+        "ALLOW": 62,
+        "BLOCK": 7840,
+        "ESCALATE": 960,
+        "HOLD": 2338
+      },
+      "gate_evaluations": 67200,
+      "new_p0_p1_finding_families": 0,
+      "scenario_evaluations": 11200,
+      "sweep": 3
+    }
+  ],
+  "total_gate_evaluations": 201600,
+  "total_scenario_evaluations": 33600
+}

@@ -1,0 +1,9 @@
+project_id: example-project
+languages: [python]
+package_managers: []
+build: []
+test: []
+typecheck: []
+runtime_services: []
+protected_paths: [production/**]
+dependency_files: []

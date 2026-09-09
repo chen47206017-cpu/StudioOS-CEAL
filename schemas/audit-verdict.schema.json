@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CEAL Audit Verdict",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "audit_id",
+    "transaction_id",
+    "artifact_sha256",
+    "verdict"
+  ],
+  "properties": {
+    "audit_id": {"type": "string", "minLength": 1},
+    "transaction_id": {"type": "string", "minLength": 1},
+    "artifact_sha256": {"type": "string", "pattern": "^[a-fA-F0-9]{64}$"},
+    "approved_source_identity": {
+      "type": ["string", "null"],
+      "description": "Exact immutable source identity approved by the audit, such as a Git commit/tree identity or source-tree digest."
+    },
+    "approved_source_identity_type": {
+      "type": ["string", "null"],
+      "enum": ["git_commit", "git_tree", "source_tree_sha256", "other_immutable", null]
+    },
+    "verdict": {"enum": ["AUDIT_APPROVED", "REPAIR_REQUIRED", "REJECT"]},
+    "findings": {"type": "array", "items": {"type": "object"}}
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {"verdict": {"const": "AUDIT_APPROVED"}},
+        "required": ["verdict"]
+      },
+      "then": {
+        "required": ["approved_source_identity", "approved_source_identity_type"],
+        "properties": {
+          "approved_source_identity": {"type": "string", "minLength": 1},
+          "approved_source_identity_type": {
+            "enum": ["git_commit", "git_tree", "source_tree_sha256", "other_immutable"]
+          }
+        }
+      }
+    }
+  ]
+}

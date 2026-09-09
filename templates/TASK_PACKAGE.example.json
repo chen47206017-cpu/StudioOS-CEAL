@@ -1,0 +1,22 @@
+{
+  "schema_version":"1.1",
+  "task_id":"TASK-001",
+  "transaction_id":"TXN-001",
+  "task_contract_sha256":"0000000000000000000000000000000000000000000000000000000000000000",
+  "policy_sha256":"0000000000000000000000000000000000000000000000000000000000000000",
+  "baseline_id":"BASELINE-001",
+  "title":"Describe one bounded engineering outcome",
+  "mode":"implement_and_verify",
+  "status":"APPROVED_FOR_IMPLEMENTATION",
+  "risk_level":"L2",
+  "scope":{"allow":["src/**","tests/**","docs/**"],"deny":[".env","production-data/**","secrets/**"]},
+  "changed_paths":[],
+  "changeset_source":"DECLARED",
+  "changeset_complete":false,
+  "acceptance":{"required_commands":["python -m unittest discover -s tests -v"],"runtime_evidence_required":false,"production_evidence_required":false},
+  "rollback":{"strategy":"Revert only the task commit or restore task-touched files from the frozen baseline."},
+  "stop_conditions":["A required change falls outside scope.allow.","A requested action touches scope.deny.","New credentials, paid services, destructive actions, or production writes are required.","Evidence contradicts a PASS claim."],
+  "capabilities":["FILE_READ","FILE_WRITE","TEST_EXECUTION"],
+  "side_effect_permissions":["GIT_BRANCH_WRITE"],
+  "external_side_effects":false
+}
