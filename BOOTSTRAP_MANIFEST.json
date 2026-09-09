@@ -70,13 +70,13 @@
     },
     {
       "path": "schemas/audit-verdict.schema.json",
-      "size": 705,
-      "sha256": "bf02f99f7e24fd4604c7b9a57ea384712fb0e333536626c2e5303fec6f045c9b"
+      "size": 1907,
+      "sha256": "60d7dc8b2dee83f8911d564a75e1364650eabfc547a02255362e444db953a64c"
     },
     {
       "path": "schemas/task-contract.schema.json",
-      "size": 892,
-      "sha256": "34495149373d186870dfa65ec7c1d183332633dddfeea74b2bdd6c920c94a793"
+      "size": 5174,
+      "sha256": "35e36ae384022cf32f846d94f6cac9c32c0c3d481116f55d4fb3818dd1201922"
     },
     {
       "path": "templates/PROJECT_PROFILE.yaml",
@@ -85,8 +85,8 @@
     },
     {
       "path": "templates/TASK_CONTRACT.yaml",
-      "size": 306,
-      "sha256": "a1050ace5399057958f18429d8a4ae58b53cad23f7d1889ec60ab1b67367e498"
+      "size": 1196,
+      "sha256": "9ca9821762db5431031223cb64438bed1d27af69e1300ac2fd570e2b07c2a893"
     }
   ]
 }
