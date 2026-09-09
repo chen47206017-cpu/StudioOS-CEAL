@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CEAL Audit Verdict",
+  "type": "object",
+  "required": [
+    "audit_id",
+    "transaction_id",
+    "artifact_sha256",
+    "verdict"
+  ],
+  "properties": {
+    "audit_id": {
+      "type": "string"
+    },
+    "transaction_id": {
+      "type": "string"
+    },
+    "artifact_sha256": {
+      "type": "string"
+    },
+    "approved_source_identity": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "verdict": {
+      "enum": [
+        "AUDIT_APPROVED",
+        "REPAIR_REQUIRED",
+        "REJECT"
+      ]
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  }
+}

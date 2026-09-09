@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CEAL Task Contract",
+  "type": "object",
+  "required": [
+    "task_id",
+    "task_type",
+    "objective",
+    "acceptance",
+    "risk_level"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string"
+    },
+    "task_type": {
+      "enum": [
+        "FEATURE",
+        "BUGFIX",
+        "REFACTOR",
+        "DOCS",
+        "DEPENDENCY",
+        "MIGRATION",
+        "RELEASE",
+        "GOVERNANCE_CHANGE"
+      ]
+    },
+    "objective": {
+      "type": "string"
+    },
+    "acceptance": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "risk_level": {
+      "enum": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4"
+      ]
+    },
+    "dependency_change": {
+      "type": "boolean"
+    },
+    "external_side_effects": {
+      "type": "boolean"
+    }
+  }
+}

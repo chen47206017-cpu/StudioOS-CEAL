@@ -1,0 +1,11 @@
+version: 1
+levels:
+  L0: {description: read-only analysis}
+  L1: {description: low-risk docs/style}
+  L2: {description: normal engineering}
+  L3: {description: runtime/API/data/security-sensitive}
+  L4: {description: production/destructive/money/schema-critical}
+modes:
+  QUICK: [L0, L1]
+  STANDARD: [L2]
+  CRITICAL: [L3, L4]

@@ -1,0 +1,10 @@
+version: 1
+hard_invariants:
+  - INV-001: implementation_agent_cannot_self_approve_audit
+  - INV-002: failed_or_blocked_transactions_must_still_package
+  - INV-003: ordinary_tasks_cannot_modify_core_audit_policy
+  - INV-004: review_packaging_must_not_delete_or_move_source
+  - INV-005: evidence_must_bind_to_transaction_and_source_identity
+  - INV-006: artifact_must_cover_complete_changeset
+  - INV-007: task_contract_and_policy_hash_cannot_drift_silently
+  - INV-008: audit_approval_does_not_equal_release_approval

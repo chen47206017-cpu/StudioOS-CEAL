@@ -1,0 +1,12 @@
+task_id: TASK-0001
+task_type: BUGFIX
+objective: "Describe one concrete objective."
+acceptance:
+  - "Acceptance criterion 1"
+  - "Acceptance criterion 2"
+risk_level: L2
+allowed_paths: [src/**, tests/**]
+denied_paths: [production/**]
+dependency_change: false
+external_side_effects: false
+max_repair_loops: 3
